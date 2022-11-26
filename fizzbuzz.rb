@@ -1,25 +1,23 @@
-def fizzubuzz(num, num_max)
-  result = []
-  
+def fizzubuzz(num)
+  num_max = 100
+
   while num <= num_max
     if num % 3 == 0 
       if num % 5 == 0
-        result.push('FizzBuzz')
+        puts 'FizzBuzz'
         num += 1
       else
-        result.push('Fizz')
+        puts 'Fizz'
         num += 1
       end
     elsif num % 5 == 0
-      result.push('Buzz')
+      puts 'Buzz'
       num += 1
     else
-      result.push(num)
+      puts num
       num += 1
     end
   end
-  
-  return result
 end
 
-puts fizzubuzz(1, 100)
+puts fizzubuzz(1)
